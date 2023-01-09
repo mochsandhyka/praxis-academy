@@ -1,0 +1,15 @@
+Karena saya menggunakan dual boot windows dan ubuntu, terdapat 3 
+parameter Grub yaitu Ubuntu, Advance options for Ubuntu, dan Windows 
+Boot Manager(on/dev/sda2).
+
+Parameter yang pertama yaitu Ubuntu digunakan 
+untuk masuk kedalam sistem operasi Ubuntu. 
+
+Parameter yang kedua yaitu 
+Advance options for Ubuntu digunakan untuk masuk kedalam sistem operasi 
+Ubuntu dengan fitur yang lebih advance, diantaranya adalah Secure boot, 
+Full disk encryption, FIPS certification, Kernel Livepatch, High availability
+Kubernetes.
+
+Parameter yang ketiga yaitu Windows Boot Manager(on/dev/sda2) digunakan
+untuk masuk kedalam sistem operasi Windows.

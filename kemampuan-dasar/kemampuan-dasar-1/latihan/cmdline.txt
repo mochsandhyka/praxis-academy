@@ -1,0 +1,141 @@
+1)Listing files
+
+sandhyka@sandhyka-X455LJ:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+2)Listing files +subdirectory
+
+sandhyka@sandhyka-X455LJ:~$ ls -R
+.:
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+./Desktop:
+
+./Documents:
+helloworld-1.py  praxis-academy
+
+./Documents/praxis-academy:
+kemampuan-dasar-1
+
+./Documents/praxis-academy/kemampuan-dasar-1:
+latihan
+
+./Documents/praxis-academy/kemampuan-dasar-1/latihan:
+cmdline.txt  env.txt  grub.txt
+
+./Downloads:
+code_1.74.2-1671533413_amd64.deb
+
+./Music:
+
+./Pictures:
+
+./Public:
+
+./snap:
+firefox  snapd-desktop-integration  snap-store
+
+./snap/firefox:
+1969  common  current
+
+./snap/firefox/1969:
+
+./snap/firefox/common:
+
+./snap/snapd-desktop-integration:
+14  49  common  current
+
+./snap/snapd-desktop-integration/14:
+
+./snap/snapd-desktop-integration/49:
+
+./snap/snapd-desktop-integration/common:
+
+./snap/snap-store:
+599  638  common  current
+
+./snap/snap-store/599:
+
+./snap/snap-store/638:
+
+./snap/snap-store/common:
+
+./Templates:
+
+./Videos:
+
+3)Listing Hidden Files
+
+sandhyka@sandhyka-X455LJ:~$ ls -a
+.              .cache     .gnupg    .profile                   Templates
+..             .config    .local    Public                     Videos
+.bash_history  Desktop    Music     snap                       .vscode
+.bash_logout   Documents  Pictures  .ssh
+.bashrc        Downloads  .pki      .sudo_as_admin_successful
+
+4)Creating files
+
+sandhyka@sandhyka-X455LJ:~$ cat >sample1
+this is sample 1
+
+5)View files
+
+sandhyka@sandhyka-X455LJ:~$ cat sample1
+this is sample 1
+
+6)Combines 2 files
+
+sandhyka@sandhyka-X455LJ:~$ cat sample1 sample2 >sample
+sandhyka@sandhyka-X455LJ:~$ cat sample
+this is sample 1
+this is sample 2
+
+7)Deleting files
+
+sandhyka@sandhyka-X455LJ:~$ ls
+Desktop    Downloads  Pictures  sample   sample2  Templates
+Documents  Music      Public    sample1  snap     Videos
+sandhyka@sandhyka-X455LJ:~$ rm sample1
+sandhyka@sandhyka-X455LJ:~$ ls
+Desktop    Downloads  Pictures  sample   snap       Videos
+Documents  Music      Public    sample2  Templates
+
+8)Move files
+
+sandhyka@sandhyka-X455LJ:~$ sudo mv sample /home/sandhyka/Documents
+[sudo] password for sandhyka: 
+sandhyka@sandhyka-X455LJ:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+sandhyka@sandhyka-X455LJ:~$ cd Documents
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  praxis-academy  sample
+sandhyka@sandhyka-X455LJ:~/Documents$ 
+
+9)Rename files
+
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  praxis-academy  sample
+sandhyka@sandhyka-X455LJ:~/Documents$ mv sample newsample
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  newsample  praxis-academy
+sandhyka@sandhyka-X455LJ:~/Documents$ 
+
+10)Make directory
+
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  newsample  praxis-academy
+sandhyka@sandhyka-X455LJ:~/Documents$ mkdir sample
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  newsample  praxis-academy  sample
+sandhyka@sandhyka-X455LJ:~/Documents$ 
+
+11)Remove directory
+
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  newsample  praxis-academy  sample
+sandhyka@sandhyka-X455LJ:~/Documents$ rmdir sample
+sandhyka@sandhyka-X455LJ:~/Documents$ ls
+helloworld-1.py  newsample  praxis-academy
+sandhyka@sandhyka-X455LJ:~/Documents$ 
+
+
