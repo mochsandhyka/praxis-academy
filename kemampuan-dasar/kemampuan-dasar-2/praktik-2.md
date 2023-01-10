@@ -1,4 +1,4 @@
-<h1>Adding Team Member
+<h1>Adding Team Member</h1>
 
 Ada 2 cara untuk menambahkan team pada github, yaitu:
 <br>1. Organizations (Pemilik organisasi dapat menambah anggota dan memilih level permissionnya)
