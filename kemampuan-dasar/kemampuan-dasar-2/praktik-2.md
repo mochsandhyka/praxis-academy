@@ -22,5 +22,20 @@ Ada 2 model untuk pull request pada github, yaitu :
 <br>2. Share repository model(digunakan pada repository private dan hanya orang tertentu yang memiliki akses)
 <br><br>
 Berikut adalah cara fork file:
-<br>1. Menggunakan perintah git clone
-/home/sandhyka/Pictures/Screenshots/Screenshot from 2023-01-10 10-09-45.png
+<br>1. Membuat repository di Organisasi github
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-04-10.png![image](https://user-images.githubusercontent.com/26155733/211496657-c1583eb3-b8e1-4cad-921d-b41e1efea456.png)
+<br>2. Fork repository yang ada pada organisasi supaya tercopy ke repository pribadi
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-04-17.png![image](https://user-images.githubusercontent.com/26155733/211496882-90cb8c5e-4cce-4fe1-b28c-9fc562a4aa64.png)
+<br>3. Menggunakan perintah git clone untuk copy ke komputer lokal
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-10-17.png![image](https://user-images.githubusercontent.com/26155733/211495603-1373d898-37a7-454b-aaf4-6ab3cc64fa21.png)
+<br>4. Merubah ke branch yang baru dan commit ke github
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-15-23.png![image](https://user-images.githubusercontent.com/26155733/211495752-719015ab-0e96-47f6-92b5-5e88d2769ddf.png)
+<br>5. File berhasil comit
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-33-04.png![image](https://user-images.githubusercontent.com/26155733/211496364-93c4ac1a-d751-40e9-9fdc-77a5ce5262b3.png)
+<br>6. Commit untuk kedua kalinya
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-39-22.png![image](https://user-images.githubusercontent.com/26155733/211496456-37b173c9-feb9-4402-9fea-d367b41b328d.png)
+
+
+
+
+
