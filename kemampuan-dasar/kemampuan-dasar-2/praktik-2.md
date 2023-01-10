@@ -48,7 +48,10 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-1
 <h1>Project Management</h1>
 <br><br>
 Menggunakan Pivotal Tracker
-<br>
+<br>1. Buat Nama Schedule pada Pivot Tracker
+![Screenshot from 2023-01-10 11-46-04](https://user-images.githubusercontent.com/26155733/211504163-43e0f63f-0b85-40a3-a69e-5bb59b6bdd07.png)
+
+
 
 
 
