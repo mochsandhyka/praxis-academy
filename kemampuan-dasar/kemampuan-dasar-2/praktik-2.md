@@ -38,9 +38,11 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-3
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-42-18.png![image](https://user-images.githubusercontent.com/26155733/211497302-dc65973f-851a-4ea9-92bb-fd2765cdfa4c.png)
 <br>
 <h1>Bug Tracking</h1>
-<br>![image](https://user-images.githubusercontent.com/26155733/211497902-0fba3f0c-351d-481c-8458-65ecf3edacab.png)
-
-
+<br>Issue dapat diberikan kepada seseorang yang bertanggung jawab untuk menyelesaikannya
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-20-58.png![image](https://user-images.githubusercontent.com/26155733/211498323-a6eada0e-62cd-458c-8b0a-a7cdcce6e851.png)
+<br>Pada komen dapat menambahkan issue yang sudah ada sebelumnya sehingga dapat dijadikan refernsi kedepannya
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-19-32.png![image](https://user-images.githubusercontent.com/26155733/211498637-1e8eb772-fe42-4fcb-8d7e-d701da4d63c4.png)
+<h1>Analytic</h1>
 
 
 
