@@ -34,6 +34,10 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-1
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-33-04.png![image](https://user-images.githubusercontent.com/26155733/211496364-93c4ac1a-d751-40e9-9fdc-77a5ce5262b3.png)
 <br>6. Commit untuk kedua kalinya
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-39-22.png![image](https://user-images.githubusercontent.com/26155733/211496456-37b173c9-feb9-4402-9fea-d367b41b328d.png)
+<br>7. Merge pull request yang telah di commit
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-42-18.png![image](https://user-images.githubusercontent.com/26155733/211497302-dc65973f-851a-4ea9-92bb-fd2765cdfa4c.png)
+<br>
+<h1>Bug Tracking</h1>
 
 
 
