@@ -73,7 +73,7 @@ Continous Integration digunakan untuk mengecek code program pada lokal bukan pad
 2. Pilih Continous integration tab dan pilih sesuai kebutuhan
 ![image](https://user-images.githubusercontent.com/26155733/211510949-6965e797-e76f-4df9-aa2c-ed8f19d19df5.png)
 <br>
-3. Tidak dapat menggunakan travis
+3. Tidak dapat menggunakan travis mungkin karena perubahan privacy and policy
 ![image](https://user-images.githubusercontent.com/26155733/211516008-5ad5c933-bd84-4c9a-add6-eaf8fca2ec0d.png)
 
 
