@@ -43,7 +43,8 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-2
 <br>Pada komen dapat menambahkan issue yang sudah ada sebelumnya sehingga dapat dijadikan refernsi kedepannya
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-19-32.png![image](https://user-images.githubusercontent.com/26155733/211498637-1e8eb772-fe42-4fcb-8d7e-d701da4d63c4.png)
 <h1>Analytic</h1>
-
-
+<br> Kita dapat melihat hasil analisa dari repository github kita pada menu analytic
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-55-19.png![image](https://user-images.githubusercontent.com/26155733/211499156-a05fe979-6ab1-4339-89f6-adfeeac33496.png)
+<h1>Project Management</h1>
 
 
