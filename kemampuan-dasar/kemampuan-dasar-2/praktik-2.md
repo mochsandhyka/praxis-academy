@@ -38,6 +38,8 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-3
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2010-42-18.png![image](https://user-images.githubusercontent.com/26155733/211497302-dc65973f-851a-4ea9-92bb-fd2765cdfa4c.png)
 <br>
 <h1>Bug Tracking</h1>
+<br>![image](https://user-images.githubusercontent.com/26155733/211497902-0fba3f0c-351d-481c-8458-65ecf3edacab.png)
+
 
 
 
