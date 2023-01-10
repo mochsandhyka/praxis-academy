@@ -30,7 +30,7 @@ mengaplikasikan bentuk dari layanan informasi. Bidang ini merupakan interkasi an
 
 - agile meliputi penemuan persyaratan dan solusi untuk sebuah kemajuan melalui usaha kolaborarif antara tim self organizing dan cross functional dengan kostumer atau pengguna.
 - merupakan perencanaan yang adaptif, perkembangan evolusioner, pengantaran, kemajuan kontinual, dan respon yang fleksibel untuk perubahan persyaratan, kapasitas, dan pemahaman suatu masalah yang perlu diselesaikan.
--populer di tahun 2001, manifesto for agile 
+- populer di tahun 2001, manifesto for agile 
 
 software development, nilai dan prinsip ini berasal dari jangkauan luas software development frameworks, meliputi Scrum dan Kanban.
 - dengan mengadopsi agile practices, kemajuan nilai dan efektivitas dari tim dan organisasi profesional software, bukti empirisnya tercampur dan sulit untuk ditemukan
@@ -39,11 +39,11 @@ software development, nilai dan prinsip ini berasal dari jangkauan luas software
 
 <h1>Scrum (software development)</h1>
 
--scrum merupakan sebuah framework dari manajemen proyek yang biasa digunakan dalam pengembangan perangkat lunak, walaupum hal tsb sudah digunaoan dalam bidang lainnya termasuk penelitian, sales, marketing, dan teknologi yang lebih advance.
+- scrum merupakan sebuah framework dari manajemen proyek yang biasa digunakan dalam pengembangan perangkat lunak, walaupum hal tsb sudah digunaoan dalam bidang lainnya termasuk penelitian, sales, marketing, dan teknologi yang lebih advance.
 
 - hal ini dirancanng untuk tim dengan 10 anggota atau bisa lebih sedikit, mereka memiliki tujuan yang dapat melengkapi time-boxed iterations, biasanya disebut dengan sprints 
 - setiap sprint tidak lebih kama dari 1 bulan dan biasanya bertahan selama 2 minggu.
--Tim scrum melakukan proses asesmen terhadap progres dalam time-boxed dalam pertemuan 15 menit atau kurang setiap harinya, disebut dengan daily scrums.
+- Tim scrum melakukan proses asesmen terhadap progres dalam time-boxed dalam pertemuan 15 menit atau kurang setiap harinya, disebut dengan daily scrums.
 - pada akhir sprint, tim mengadakan 2 pertemuan, 1 sprint melajukan review pada pekerjaan yang didemonstrasikan pada stakeholders dan elicit feedback, sprint satunya lagi merencanakan pengaktifan tim untuk refleksi dan kemajuan.
 
 
@@ -51,7 +51,7 @@ software development, nilai dan prinsip ini berasal dari jangkauan luas software
 <h1>Extreme programming</h1>
 
 
--extreme programming (XP) meruapakan metodologi pengembangan perangkat lunak yang direncanakan untuk mengembangkan kualitas perangkat lunak dan responsif untuk mengubah persyaratab kostumer. 
+- extreme programming (XP) meruapakan metodologi pengembangan perangkat lunak yang direncanakan untuk mengembangkan kualitas perangkat lunak dan responsif untuk mengubah persyaratab kostumer. 
 - terdapat planning/feedback loops dalam extreme programming
 - elemen lain dalam extreme programming meliputi programming in pairs, unit testing of all code, not programming features until they are actually needed, a flat management structure, code simplicity and clarity, mengharapkan perubahan pada persyaratan yang diberikan oleh kostumer seiring berjalannya waktu dan lebih mudah dalam pemahaman suatu permasalahan, dan komunikasi berkala dengan kostumer dan sesama programmer.
 
