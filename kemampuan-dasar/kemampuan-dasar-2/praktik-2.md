@@ -63,7 +63,18 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-5
 <br>7. Terintegrasi dengan pivotaltracker
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-58-01.png![image](https://user-images.githubusercontent.com/26155733/211505607-8844b185-dfc6-41cd-bea8-bfa373b3b618.png)
 
-<h1>Continues Integration</h1>
+<h1>Continous Integration</h1>
+<br><br>
+Continous Integration digunakan untuk mengecek code program pada lokal bukan pada server supaya tidak terjadi conflik saat ada yang upload secara bersama
+<br>
+1. Buka tab action pada repository untuk memilih workflow
+![image](https://user-images.githubusercontent.com/26155733/211508913-af01ad83-8f49-4865-88c5-57695bb87045.png)
+<br>
+2. Pilih Continous integration tab dan pilih sesuai kebutuhan
+![image](https://user-images.githubusercontent.com/26155733/211510949-6965e797-e76f-4df9-aa2c-ed8f19d19df5.png)
+<br>
+3. Tidak dapat menggunakan travis
+![image](https://user-images.githubusercontent.com/26155733/211516008-5ad5c933-bd84-4c9a-add6-eaf8fca2ec0d.png)
 
 
 
