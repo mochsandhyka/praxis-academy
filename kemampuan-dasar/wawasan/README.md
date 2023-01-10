@@ -12,9 +12,7 @@ Electronic (1940-sekarang)
 <h1>Perbedaan Computer Science (Ilmu pengetahuan komputer) dan Informatics (Informatika)</h1>
 
 - computer science adalah sebuah studi mengenai teori, eksperimen, dan teknik yang membentuk dasar untuk meelrancang dan menggunakan komputer. Hal tsb merupakan pendekatan ilimiah dan praktis dalam pengaplikasiannya dan studi yang sitematis  dari struktur, ekspresi, dan mekanisme dari prosedur metodologis (algoritma) yang menggarisbawahi akuisisi, representasi, proses, penyimpanan, dan komunikasi  akses pada suatu informasi 
-- informatics(informatika) merupakan cabang dari teknik informatika. Hal tsb berkembang pada praktis dari proses informasi dan teknologi sistem informasi, sebagai bidang akademik yang 
-
-mengaplikasikan bentuk dari layanan informasi. Bidang ini merupakan interkasi antara manusia dan suatu informasi sejalan dengan konstruksi dari berbagai organisasi, teknologi, dan sistem.
+- informatics(informatika) merupakan cabang dari teknik informatika. Hal tsb berkembang pada praktis dari proses informasi dan teknologi sistem informasi, sebagai bidang akademik yang mengaplikasikan bentuk dari layanan informasi. Bidang ini merupakan interkasi antara manusia dan suatu informasi sejalan dengan konstruksi dari berbagai organisasi, teknologi, dan sistem.
 
 
 
