@@ -46,5 +46,9 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-1
 <br> Kita dapat melihat hasil analisa dari repository github kita pada menu analytic
 <br>(https://user-images.githubusercontent.com/26155733/211499156-a05fe979-6ab1-4339-89f6-adfeeac33496.png)
 <h1>Project Management</h1>
+<br><br>
+Menggunakan Pivotal Tracker
+<br>
+
 
 
