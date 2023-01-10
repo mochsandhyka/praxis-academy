@@ -28,9 +28,7 @@ Electronic (1940-sekarang)
 
 - agile meliputi penemuan persyaratan dan solusi untuk sebuah kemajuan melalui usaha kolaborarif antara tim self organizing dan cross functional dengan kostumer atau pengguna.
 - merupakan perencanaan yang adaptif, perkembangan evolusioner, pengantaran, kemajuan kontinual, dan respon yang fleksibel untuk perubahan persyaratan, kapasitas, dan pemahaman suatu masalah yang perlu diselesaikan.
-- populer di tahun 2001, manifesto for agile 
-
-software development, nilai dan prinsip ini berasal dari jangkauan luas software development frameworks, meliputi Scrum dan Kanban.
+- populer di tahun 2001, manifesto for agile software development, nilai dan prinsip ini berasal dari jangkauan luas software development frameworks, meliputi Scrum dan Kanban.
 - dengan mengadopsi agile practices, kemajuan nilai dan efektivitas dari tim dan organisasi profesional software, bukti empirisnya tercampur dan sulit untuk ditemukan
 
 
