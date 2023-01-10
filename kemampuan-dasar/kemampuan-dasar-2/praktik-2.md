@@ -14,5 +14,4 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-09%2023-4
 <br>4. Kita dapat menambahkan team yang nantinya dapat diatur level permissionnya
 file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-09%2023-51-07.png![image](https://user-images.githubusercontent.com/26155733/211493215-1d3f0f07-a394-4943-bec5-b269dfd4213d.png)
 <br>
-
-#
+ 
