@@ -50,7 +50,20 @@ file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2015-1
 Menggunakan Pivotal Tracker
 <br>1. Buat Nama Schedule pada Pivot Tracker<br>
 ![Screenshot from 2023-01-10 11-46-04](https://user-images.githubusercontent.com/26155733/211504163-43e0f63f-0b85-40a3-a69e-5bb59b6bdd07.png)
+<br>2. Sub menu yang ada apda schedule 
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-47-30.png![image](https://user-images.githubusercontent.com/26155733/211504692-9cb440e4-5a1d-43de-a7ca-dd55e301dae6.png)
+<br>3. Tambahkan integrasi
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-51-07.png![image](https://user-images.githubusercontent.com/26155733/211504768-841706f3-49be-4c30-8752-bb3b376639a8.png)
+<br>4. Pilih github
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-51-22.png![image](https://user-images.githubusercontent.com/26155733/211504833-cc560f93-645c-4eae-9a02-b898593c43db.png)
+<br>5. Copy payload url dan secret token untuk dikonfigurasikan ke github
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-52-45.png![image](https://user-images.githubusercontent.com/26155733/211505097-9a020ddd-ff8e-40fe-92fb-fdca30d99b0d.png)
+<br>6. Tambahkan webhook pada github
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-53-11.png![image](https://user-images.githubusercontent.com/26155733/211505197-13b3c442-635a-408e-8f7e-90726dd04001.png)
+<br>7. Terintegrasi dengan pivotaltracker
+file:///home/sandhyka/Pictures/Screenshots/Screenshot%20from%202023-01-10%2011-58-01.png![image](https://user-images.githubusercontent.com/26155733/211505607-8844b185-dfc6-41cd-bea8-bfa373b3b618.png)
 
+<h1>Continues Integration</h1>
 
 
 
