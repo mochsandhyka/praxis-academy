@@ -16,3 +16,4 @@ elif nilai >=76:
     print(c)
 elif nilai <=75:
     print(d)
+

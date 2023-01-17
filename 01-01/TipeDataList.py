@@ -10,6 +10,17 @@ e = [a,c]
 #array ke 0 1
 f = e[0][1]
 
+#lenght dari array
+g = ["a","b","c","d"]
 
+#print(len(g))
 
-print(f)
+#nested list (array dalam array)
+h = [a,b]
+#print(h)
+"""
+a, b = 0, 1
+while a < 10:
+    print(a)
+    a, b = b, a+b
+"""
