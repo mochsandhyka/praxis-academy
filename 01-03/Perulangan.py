@@ -15,10 +15,10 @@ del listAngka[0]
 a = 3 in listAngka
 b = 3 not in listAngka
 #Perulangan
-print("[LIST ANGKA]")
+#print("[LIST ANGKA]")
 
-for la in listAngka:
-    print(la)
+#for la in listAngka:
+ #   print(la)
 
 
 #TUPLE
@@ -33,7 +33,6 @@ for la in listAngka:
 #for ta in tupleAngka:
  #   print(ta)
 
-
 #SET
 #tidak dapat diakses melalui indeks
 #tidak ada fitur slicing data
@@ -46,4 +45,28 @@ for la in listAngka:
 #print("[SET ANGKA]")
 #for sa in setAngka:
  #   print(sa)
+
+
+"""
+    clear()  Remove all the elements from the dictionary
+    copy() Returns a copy of the dictionary
+    get() Returns the value of specified key
+    items() Returns a list containing a tuple for each key value pair
+    keys() Returns a list containing dictionary’s keys
+    pop() Remove the element with specified key
+    popitem() Removes the last inserted key-value pair
+    update() Updates dictionary with specified key-value pairs
+    values() Returns a list of all the values of dictionary
+"""
+
+#DICTIONARY
+person = {
+    1 : {"name" : "dika"},
+    2 : {"name" : "dika2"},
+    }
+
+for i in person:
+    print(person[i]["name"])
+    
+
 
