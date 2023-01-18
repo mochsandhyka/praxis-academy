@@ -5,9 +5,8 @@ def fib(n):
         print(a, end=' ')
         a, b = b, a+b
     print()
-
 fib(2000)
-
+  
 #fibonaci2
 def fib2(n):
     result = []
@@ -17,5 +16,5 @@ def fib2(n):
         a,b = b, a+b
     return result
 
-f100 = fib2(100)
+f100 = fib2(2000)
 print(f100)
