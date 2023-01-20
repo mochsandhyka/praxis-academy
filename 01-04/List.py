@@ -23,10 +23,26 @@ listKendaraanDictionary = {
     "darat" : ["kereta","delman"],
     "udara" : "helikopter"}
 
+
 listKendaraanDic = list(listKendaraanDictionary.values())   #convert value dictionary ke list 
 #for i in listKendaraanDic[0]:                               #looping isi listkendaraandic[0]
  #   listKendaraanDic.append(i)                              #menambah listkendaraandic dengan isi dari listkendaraandic[0]
 #listKendaraanDic.pop(0)                                     #menghapus isi listkendaraandic index ke 0
+
+
+listKendaraan2Dictionary = {
+    "darat" : ["kereta","delman"],
+    "air" : ["kapal selam"],
+    "udara" : ["kelelawar","helikopter"]}
+listKendaraan2Dictionary = list(listKendaraan2Dictionary.values())
+ask = []
+for i in listKendaraan2Dictionary:
+    ask.extend(i)
+
+print(ask)
+
+ 
+ 
 
 #listKendaraanDic.extend(listKendaraanDic[0])
 #listKendaraanDic.pop(0)
