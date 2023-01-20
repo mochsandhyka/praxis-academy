@@ -10,10 +10,10 @@ for i in dictHewanList:
 #ADD KARNIVORA TO DICTHEWAN
 listHewanKarnivora = ["Elang","Ular"]
 dictHewan = {"Karnivora" : ["Harimau","Singa"], "Herbivora" : ["Kambing"], "Omnivora" : ["Monyet"]}
-#dictHewan.update({"Karnivora" : listHewanKarnivora})
+dictHewan.update({"Karnivora" : listHewanKarnivora})
 
 #menambah listhewan karnifora ke dict hewan
 if "Karnivora" in dictHewan:
     dictHewan["Karnivora"].extend(listHewanKarnivora)
 
-print(dictHewan)
+print(listHewanKarnivora)

@@ -2,7 +2,7 @@
 
 #APPEND
 listKendaraan = ["mobil","motor","truck"]   #buat list kendaraan
-listKendaraan.append("bus")                 #menambah list kendaraan dengan append(menambah 1 data di akhir
+#listKendaraan.append("bus")                 #menambah list kendaraan dengan append(menambah 1 data di akhir
 #print(listKendaraan)
 
 listKendaraanTambahan =["perahu","pesawat"] #list kendaraan tambahan
@@ -25,10 +25,10 @@ listKendaraanDictionary = {
 
 
 listKendaraanDic = list(listKendaraanDictionary.values())   #convert value dictionary ke list 
-#for i in listKendaraanDic[0]:                               #looping isi listkendaraandic[0]
- #   listKendaraanDic.append(i)                              #menambah listkendaraandic dengan isi dari listkendaraandic[0]
-#listKendaraanDic.pop(0)                                     #menghapus isi listkendaraandic index ke 0
-
+for i in listKendaraanDic[0]:                               #looping isi listkendaraandic[0]
+    listKendaraanDic.append(i)                              #menambah listkendaraandic dengan isi dari listkendaraandic[0]
+listKendaraanDic.pop(0)                                     #menghapus isi listkendaraandic index ke 0
+print(listKendaraanDic)
 
 listKendaraan2Dictionary = {
     "darat" : ["kereta","delman"],
