@@ -38,20 +38,35 @@
  
   <div class="container-fluid">
 
-    <form class="row g-3">
-      <div clas="col-md-6">
+    <form class="row g-3 needs-validation" novalidate>
+      <div clas="col-md-12">
         <label class="form-label">Nama Lengkap</label>
         <input type="text" class="form-control">
       </div>
+      <div class="col-12">
+        <label class="form-label">Jenis Kelamin</label>
+      <div class="col-md-6"></div>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Laki - laki
+        </label>
+        <div class="col-md-6"></div>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Perempuan
+        </label>
+      </div>
+       
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+       
       
-      <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail4">
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
-      </div>
       <div class="col-12">
         <label for="inputAddress" class="form-label">Alamat</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="">
@@ -84,7 +99,7 @@
         <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           Setuju dengan syarat yang ada
         </button>
-
+          
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -94,7 +109,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                ...
+                Terms and Condition
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -1,0 +1,118 @@
+<div clas="col-md-12">
+    <label class="form-label">Jenis Kelamin</label>
+  </div>
+  <div>
+    <div class="col-md-6"></div>
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Laki - laki
+    </label>
+    </div>
+    <div class="col-md-6">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Perempuan
+    </label>
+    </div>
+  </div> 
+
+
+  <form class="row g-3 needs-validation" novalidate>
+    <div clas="col-md-12">
+      <label class="form-label">Nama Lengkap</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-12">
+      <label class="form-label">Jenis Kelamin</label>
+    <div class="col-md-6"></div>
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Laki - laki
+      </label>
+      <div class="col-md-6"></div>
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Perempuan
+      </label>
+    </div>
+     
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+     
+    
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Alamat</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Kota</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>Yogyakarta</option>
+        <option>Malang</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Kecamatan</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>Lowokwaru</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Kode Pos</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          <!-- Button trigger modal -->
+      <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Setuju dengan syarat yang ada
+      </button>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+    
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Syarat dan ketentuan</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Terms and Condition
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Regsiter</button>
+      <a href="/" class="btn btn-primary">Cancel</a>
+    </div>
+  </form>
