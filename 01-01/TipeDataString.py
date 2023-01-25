@@ -39,3 +39,9 @@ l = f"{b} let your mother gone"
 m = "{0} let your mother gone".format(b)
  
 print(m,l)
+
+#return string without whitespace
+#txt = " hello world "
+#x= txt.strip()
+#txt.upper() uppercase
+#txt.replace() replace
