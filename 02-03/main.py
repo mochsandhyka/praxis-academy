@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 
 app = Flask(__name__)
 
@@ -14,6 +14,9 @@ def home():
 def register():
     return render_template("register.html")
 
-@app.route("/portofolio")
+@app.route("/portofolio", methods=["POST"])
 def portofolio():
-    return  render_template("portofolio.html")
+    if request.method == "POST":
+        portofolio = request.form["inputNamaDepan",""]
+    else:
+        return render_template("portofolio.html")
