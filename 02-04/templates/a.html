@@ -1,0 +1,91 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Multiple step form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-4">
+            <form class="form-horizontal" action="" method="POST" id="myform">
+                    <div class="form-group">
+                       <label for="title">Past Question Title</label>
+                       <input type="text" class="form-control" id="question" name="question" placeholder="Type Question Here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="course">Course Code</label>
+                       <select type="text" class="form-control" id="course" name="course" placeholder="Course"></select>
+                       <option></option>
+                    </div>
+                        <div id="fielda">
+                            <div id="fielda0">
+                                <!-- Text input-->
+                                    <hr/>
+                                    <div class="form-group">
+                                       <label for="csetitle">Question</label>
+                                       <textarea type="text" class="form-control" id="question" name="question" placeholder="Type Question Here" cols="40" rows="5" style="resize:vertical;" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="nt">Upload Image</label>
+                                      <input type="file" name="file" class="filestyle" data-iconName="glyphicon glyphicon-inbox">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="options">Options</label>
+                                        <div data-role="dynamic-fields">
+                                            <div class="form-inline">
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        <input type="radio" name="reason" value="Answer"> Answer 
+                                                        <span>-</span>
+                                                        <label class="sr-only" for="field-name">Option</label>
+                                                        <input type="text" class="form-control" id="field-name" placeholder="Field Name">
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-danger" data-role="remove">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                                <button class="btn btn-primary" data-role="add">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </div>  <!-- /div.form-inline -->
+                                        </div>  <!-- /div[data-role="dynamic-fields"] -->
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="csetitle">Slug</label>
+                                       <textarea type="text" class="form-control" id="question" name="question" placeholder="Explain You Answer" cols="40" rows="5" style="resize:vertical;" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="csetitle">Point</label>
+                                       <input type="number" class="form-control" id="question" name="question" placeholder="Allocate Score Here" required>
+                                       <hr/>
+                                    </div>
+                            </div>
+                            <!--end field0-->
+                        </div>
+                        <!--end field-->
+                        
+                        <div class="form-group">
+                                <button id="add-more" name="add-more" class="btn btn-primary">Add More</button>
+                        </div>
+            </form>
+            <div >
+            <p style="text-align:center;">By <a href="http://bootsnipp.com/tarun90">Tarun Mahajan</a></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

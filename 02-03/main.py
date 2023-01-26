@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,url_for
 
 app = Flask(__name__)
 
@@ -14,9 +14,14 @@ def home():
 def register():
     return render_template("register.html")
 
-@app.route("/portofolio", methods=["POST"])
-def portofolio():
+@app.route("/porto", methods=["POST","GET"])
+def porto():
     if request.method == "POST":
-        portofolio = request.form["inputNamaDepan",""]
+        porto = request.form["inputNamaDepan"]
+        return redirect(url_for("afterPorto",porto=afterPorto))
     else:
-        return render_template("portofolio.html")
+        return render_template("port.html")
+
+@app.route("/<porto>")
+def afterPorto(porto):
+    return "{porto}"

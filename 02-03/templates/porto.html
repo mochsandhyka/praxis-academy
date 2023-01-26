@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block title %}Portofolio{% endblock %}
+{% block content %}
+<div class="container-fluid"> 
+    <form action="#" method="post" class="row g-3">
+         
+        <!-- Nama -->
+        <div class="col-md-12">
+            <label for="nama" class="form-label"><h2>Nama</h2></label>
+        </div>
+        <div class="col-md-4">
+            <label for="namaDepan" class="form-label">Nama Depan</label>
+            <input type="text" class="form-control" name="inputNamaDepa" id="inputNamaDepan">
+        </div>
+        <div class="col-12">
+            <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+            <a href="/" class="btn btn-primary">Cancel</a>
+          </div>
+          
+    </form> 
+</div>
+{% endblock %}
