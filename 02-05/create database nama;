@@ -1,0 +1,63 @@
+Database - skema -tabel
+select a.id from public.akun a 
+select (alias.id) from namaskema.namadatabase alias
+
+PostgreSQL
+Masuk PostgreSQL        sudo -u postgre psql
+
+Database
+Membuat database        create database namadatabase;
+Melihat database        \l
+Memilih database        \c namadatabase;
+Menghapus database      drop database namadatabase;
+
+Tabel
+Melihat tabel           \d namatabel
+Membuat Tabel           create table namatabel(id serial primary key, 
+                                               name varchar (50) unique not null,
+                                               namakolom tipedata (panjangdata) constraint)
+
+                        JOIN
+
+                        create table siswa(
+                            id_siswa serial primary key,
+                            nama varchar (50) not null,
+                            umur int not null
+
+                        );
+
+                        create table pelajaran(
+                            id_pelajaran serial primary key,
+                            nama_pelajaran varchar (50) not null unique
+                        )
+
+                        create table pelajaransiswa(
+                            id_siswa int not null,
+                            id_pelajaran int not null,
+                            primary key (id_siswa, id_pelajaran),
+                            foreign key (id_pelajaran)
+                                references pelajaran (id_pelajaran),
+                            foreign key (id_siswa)
+                                references siswa (id_siswa)
+                        );
+
+                        create table namatabel(id serial not null,
+                                               id_tabelygdijoin serial not null,
+                                               nama varchar (50) not null,
+                                               primary key (id, id_tabelygdijoin),
+                                               foreign key (id)
+                                                    references namatabel1(idtabel1)
+                                                )
+
+Column
+Melihat kolom           \d namakolom
+Menambah kolom          ALTER TABLE namatabel
+                        ADD COLUMN namakolom tipedata constraint(not null, unique);
+
+Select
+
+1. select * from namatabel;
+2. select namakolom from namatabel;
+3. select distinct namakolom1, namakolom2 from namatabel;
+4. select distinct on (namakolom1) namakolom1, namakolom2  from namatabel order by namakolom1,namakolom2
+
