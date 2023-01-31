@@ -3,7 +3,7 @@ select a.id from public.akun a
 select (alias.id) from namaskema.namadatabase alias
 
 PostgreSQL
-Masuk PostgreSQL        sudo -u postgre psql
+Masuk PostgreSQL        sudo -u postgres psql
 
 Database
 Membuat database        create database namadatabase;
@@ -55,9 +55,26 @@ Menambah kolom          ALTER TABLE namatabel
                         ADD COLUMN namakolom tipedata constraint(not null, unique);
 
 Select
+1. select nama,umur as usia from siswa;
+   select nama,umur usia from siswa;
+   mengaliaskan umur menjadi usia
+2. select nama||''||umur "nama + umur" from siswa;
+   nama + umur
+3. select nama,umur from siswa order by nama asc;
+4. select nama,umur from siswa order by umur desc;
+5. select nama,umur from siswa order by umur, nama;
+6. select umur,length(nama) len from siswa order by len;
+7. select nama,umur from siswa where nama='bumi';
+8. select nama,umur from siswa where nama='bumi' or umur=10;
+9. select nama,umur from siswa where nama in('bumi','budi');
+10.select nama,umur from siswa where nama like 'bu%';
+11.
 
 1. select * from namatabel;
 2. select namakolom from namatabel;
 3. select distinct namakolom1, namakolom2 from namatabel;
 4. select distinct on (namakolom1) namakolom1, namakolom2  from namatabel order by namakolom1,namakolom2
+
+
+
 

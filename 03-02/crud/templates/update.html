@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    {% for i in query %}
+    <div class="container">
+        <form action="/update/{{i[0]}}" method="post">
+            <div class="form-floating mb-3">
+                <input type="text" value="{{i[1]}}" name="taskName" class="form-control" id="floatingInput" placeholder="task name">
+                <label for="floatingInput">Task Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" value="{{i[2]}}" name="description" class="form-control" id="floatingInput" placeholder="description">
+                <label for="floatingInput">Description</label>
+            </div>
+            <button type="submit" value="submit" class="btn btn-primary">Save</a>
+        </form>
+    </div>
+    {% endfor %}
+</body>
+</html>

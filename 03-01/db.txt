@@ -1,0 +1,38 @@
+   nama    | umur 
+-----------+------
+ budi      |    3
+ bumi      |   10
+ surya     |   20
+ abi       |   25
+ cristoper |   30
+ anisa     |   35
+
+    nama    | umur 
+-----------+------
+ abi       |   25
+ anisa     |   35
+ budi      |    3
+ bumi      |   20
+ cristina  |   10
+ cristoper |   30
+ surya     |   10
+ Surya     |   20
+
+11. select *from siswa limit 5;                 sebanyak 5
+12. select *from siswa limit 5 offset 2;        mulai dari 3 dan sebanyak 5
+13. select *from siswa where umur in(1,2);      yang umur 1 dan 2
+14. select *from siswa where umur not in(1,2);  yang umur bukan 1 dan 2
+15. select *from siswa where umur <> 1 and umur <> 2;   yang umur bukan 1 dan 2(<> == not equal)
+16. select *from siswa where id_siswa in(select id_siswa from siswa where umur <>10);
+17. select *from siswa where umur between 1 and 20;
+18. select *from siswa where umur not between 1 and 20;
+19. select *from siswa where umur is not null;
+20. select a, fruit_a, b, fruit_b from basket_a inner join basket_b on fruit_a = fruit_b;      inner join == matching values in basket_a and basket_a
+21. select a, fruit_a, b, fruit_b from basket_a left join basket_b on fruit_a = fruit_b;   1st tabel is left 2nd tabel is right (left lengkap)(right sama)
+22. select a, fruit_a, b, fruit_b from basket_a left join basket_b on fruit_a = fruit_b where b is null;  left outer join
+23. select a, fruit_a, b, fruit_b from basket_a right join basket_b on fruit_a = fruit_b;
+24. select a, fruit_a, b, fruit_b from basket_a right join basket_b on fruit_a = fruit_b where a is null;
+25. select a, fruit_a, b, fruit_b from basket_a full outer join basket_b on fruit_a = fruit_b;
+26. select a, fruit_a, b, fruit_b from basket_a full outer join basket_b on fruit_a = fruit_b where a is null or b is null;
+27. select a.first_name||' '||a.last_name employee, b.first_name||' ' ||b.last_name manager from employee a inner join employee b on b.employee_id = a.manager_id order by manager;
+28. select siswa.nama, pelajaran.nama_pelajaran from siswa join pelajaran on siswa.id_pelajaran = pelajaran.id_pelajaran;
