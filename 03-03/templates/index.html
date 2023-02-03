@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/" method="post">
+        <input type="text"  name="task_name" placeholder="nama task">
+        <input type="text-area" name="description" placeholder="deskripsi">
+        <button type="submit">save</button>
+ 
+    </form>
+    {% for a in query %}
+    <form action="/update/{{a[0]}}" method="post">
+        <input type="text" value="{{a[1]}}" name="task_name" placeholder="nama task">
+        <input type="text-area" value="{{a[2]}}" name="description" placeholder="deskripsi">
+        <input type="text" value="{{a[3]}}" name="status" placeholder="status">
+        <button type="submit" value="submit">save</button>
+    </form>
+    {% endfor %}
+
+    {% for i in taskList %}
+    {{i}}
+    <a href="/delete/{{i[0]}}">delete</a>
+    <a href="/update/{{i[0]}}">update</a>
+    {% endfor %}
+    
+</body>
+</html>

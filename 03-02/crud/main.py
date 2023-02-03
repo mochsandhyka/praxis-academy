@@ -14,16 +14,18 @@ db.bind(provider="postgres", user="sandika", password="460446", host="localhost"
 db.generate_mapping(create_tables=True)
 Pony(app)
 
-#  insert into task(taskname, description) values ('a','b');
+#  insdert into task(taskname, description) values ('a','b');
 
 @app.route("/", methods=["POST"])
 def create():
-    afterPorto = request.form.to_dict(flat=True)
-    taskName = afterPorto.values()
-    list = []
-    for i in taskName:
-        list.append(i) 
-    db.execute(f"INSERT INTO task(taskname, description) VALUES ('{list[0]}','{list[1]}');")
+    # afterPorto = request.form.to_dict(flat=True)
+    # taskName = afterPorto.values()
+    # list = []
+    # for i in taskName:
+    #     list.append(i) 
+    taskName = request.form.get('taskName')
+    description = request.form.get('description')
+    db.execute(f"INSERT INTO task(taskname, description) VALUES ('{taskName}','{description}');")
     return redirect(url_for("index"))
        
 @app.route("/")
@@ -53,7 +55,7 @@ def update(id):
     list = []
     for i in b:
         list.append(i)
-    query = db.execute(f"update task set taskname = '{list[0]}', description = '{list[1]}' where id = id")
+    query = db.execute(f"update task set taskname = '{list[0]}', description = '{list[1]}' where id = {id}")
     return redirect(url_for("index"))
 
 
