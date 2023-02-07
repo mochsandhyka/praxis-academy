@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerbit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Penerbit</h1>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Penerbit</th>
+                    
+                </tr>
+            </thead>
+            {% for i in viewDataPenerbit %}
+            <tbody>
+                <tr> 
+                    <th>{{i[1]}}</th>
+                    <th>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                          
+                            <a class="btn btn-warning" href="updatePenerbit/{{i[0]}}">Update</button>
+                            <a class="btn btn-danger" href="deletePenerbit/{{i[0]}}">Delete</a>
+                          </div>
+                    </th>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        
+        <form action="/penerbit" method="post">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="Penerbit" name="namaPenerbit" id="penerbit">
+                <label for="penerbit">Penerbit</label>
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

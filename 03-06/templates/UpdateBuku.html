@@ -11,6 +11,7 @@
 <body>
     {% for i in data %}
     <div class="container">
+        <h1>Update Buku</h1>
         <form action="/updateBuku/{{i[0]}}" method="post">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" placeholder="Judul Buku" value="{{i[2]}}" name="nama_buku" id="nama_buku">
@@ -19,6 +20,30 @@
             <div class="form-floating mb-3"> 
                 <input type="text" class="form-control" placeholder="Stok Buku" value="{{i[1]}}"  name="jumlah_buku" id="jumlah_buku">
                 <label for="jumlah_buku">Stok</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="kategori" aria-label="Default select example">
+                {% for i in viewKategori %}
+                    <option name="kategori" value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+                </select>
+                <label for="floatingInput">Kategori</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="pengarang" aria-label="Default select example">
+                {% for i in viewPengarang %}
+                    <option name="pengarang" value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+                </select>
+                <label for="floatingInput">Pengarang</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="penerbit" aria-label="Default select example">
+                {% for i in viewPenerbit %}
+                    <option name="penerbit" value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+                </select>
+                <label for="floatingInput">Penerbit</label>
             </div>
             <button type="submit">Update</button>
         </form>

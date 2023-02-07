@@ -19,7 +19,7 @@
                     <th scope="col">Stok</th>
                 </tr>
             </thead>
-            {% for i in data %}
+            {% for i in viewDataBuku %}
             <tbody>
                 <tr>
                     <th>{{i[2]}}</th>
@@ -45,9 +45,32 @@
                 <input type="text" class="form-control" placeholder="Stok Buku"  name="jumlah_buku" id="jumlah_buku">
                 <label for="jumlah_buku">Stok</label>
             </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="kategori" aria-label="Default select example">
+                {% for i in viewKategori %}
+                    <option name="kategori" value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+                </select>
+                <label for="floatingInput">Kategori</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="pengarang" aria-label="Default select example">
+                {% for i in viewPengarang %}
+                    <option name="pengarang" value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+                </select>
+                <label for="floatingInput">Pengarang</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" name="penerbit" aria-label="Default select example">
+                {% for i in viewPenerbit %}
+                    <option name="penerbit" value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+                </select>
+                <label for="floatingInput">Penerbit</label>
+            </div>
             <button type="submit">Create</button>
         </form>
-
     </div>
  
     
