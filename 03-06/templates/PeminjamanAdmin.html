@@ -14,6 +14,9 @@
             <tr>
                 <th scope="col">Nama Buku</th>
                 <th scope="col">Stok</th>
+                <th scope="col">Anggota</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Buku</th>
             </tr>
         </thead>
         {% for i in viewPeminjaman %}
@@ -26,10 +29,13 @@
                 <th>{{i[5]}}</th>
                 <th>{{i[6]}}</th>
                 <th>
-                        <form action="/peminjamanAnggota/{{i[0]}}" method="post">
-                            <button type="submit">Pinjam</button>
-                        </form>
-                    </div>
+                    
+                    <form action="/accAdmin/{{i[0]}}" method="post">
+                        <a class="btn btn-danger" href="deletePeminjamanAdmin/{{i[0]}}">Delete</a>
+                        
+                        <button type="submit">Acc</button>
+                    </form>
+                        
                 </th>
             </tr>
         </tbody>

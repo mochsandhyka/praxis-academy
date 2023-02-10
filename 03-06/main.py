@@ -1,13 +1,15 @@
-from flask import Flask, render_template,request,redirect,url_for
-from datetime import *
+from flask import Flask, render_template,request,redirect,url_for,session
+from flask_login import LoginManager
+from datetime import datetime
 from pony.flask import Pony
-from pony.orm import *
-
+from pony.orm import * 
 
 app = Flask(__name__)
+
+
 db = Database()
 
-# pengarang penerbit kategori
+ 
 
 
 class Admin(db.Entity):
@@ -66,6 +68,12 @@ class Peminjaman(db.Entity):
 db.bind(provider="postgres",user="sandika", password="460446", host="localhost", database="perpustakaan")
 db.generate_mapping(create_tables=True)
 Pony(app)
+# login_manager = LoginManager(app)
+# login_manager.login_view = 'Login'
+
+# @login_manager.user_loader
+# def load_user(user_id):
+#     return db.Email.get(pk_admin = user_id)
 
 
 def getForm(a):
@@ -100,9 +108,21 @@ def selectPenerbit():
     a = db.execute(f"select *from penerbit")
     return a
 
-@app.route("/")
-def Home():
-    return "welcome"
+################################### HOME ###################################
+
+@app.route("/login")
+#@login_required
+def vLogin():
+    return render_template("Login.html")
+
+@app.route("/login",methods=['POST'])
+def Login():
+    email = getForm('email')
+    password = getForm('password')
+    a = db.execute(f"select *from anggota where email_anggota = '{email}' and password = '{password}'")
+   
+
+    return render_template("Home.html",a=a)
 
 ################################### BUKU ###################################
 
@@ -322,7 +342,7 @@ def updateAdmin(id):
 
 @app.route("/peminjamanAnggota")
 def vPeminjaman():
-    viewBuku = selectBuku()
+    viewBuku = db.execute(f"select *from buku where stok > 0")
     return render_template("Peminjaman.html",viewBuku=viewBuku)
  
 
@@ -330,8 +350,12 @@ def vPeminjaman():
 def createPeminjaman(id):
     tanggalPeminjaman = datetime.now()
     tanggalKembali = datetime.now() #getForm('tanggalKembali')
-    anggota = 1 #getForm('anggota')
-    buku = 1#getForm('buku')
+    anggota = 1 # session anggota
+    buku = db.execute(f"select pk_buku from buku where pk_buku = {id}")
+    for a in buku:
+        buku = a 
+    buku = sum(buku)
+    print(buku)
     a = db.execute(f"select stok from buku where pk_buku = {id}")
     for a in a:
         a = a
@@ -348,5 +372,16 @@ def createPeminjaman(id):
 def vPeminjamanAdmin():
     viewPeminjaman = selectPeminjaman()
     return render_template("PeminjamanAdmin.html", viewPeminjaman = viewPeminjaman)
+
+@app.route("/deletePeminjamanAdmin/<id>")
+def deletePeminjamanAdmin(id):
+    db.execute(f"delete from peminjaman where pk_peminjaman = {id}")
+    return redirect(url_for('vPeminjamanAdmin'))
+
+@app.route("/accAdmin/<id>",methods=['POST'])
+def accAdmin(id):
+    a = 1 #session id admin
+    db.execute(f"update peminjaman set fk_admin = {a} where pk_peminjaman = {id}")
+    return redirect(url_for('vPeminjamanAdmin'))
     
 

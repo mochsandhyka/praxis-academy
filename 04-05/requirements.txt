@@ -2,4 +2,3 @@ pony == 0.7.16
 Flask == 2.2.2
 python-dotenv == 0.21.1
 psycopg2-binary == 2.9.5
-Flask-Login == 0.6.2 
