@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block tittle %}
+<title>Name</title>
+{% endblock tittle%}
+{% block content %}
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-info" role="alert">
+    {{message}}
+    </div>
+{% endfor %}
+
+{% if name %}
+    <h1> hello {{name}}</h1>
+{% else %}
+    <h1>Whats your name</h1>
+    <br/>
+    <form method="post">
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label }}
+        {{ form.name() }}
+        <br/>
+        {{ form.submit() }}
+
+    </form>
+{% endif %}
+{% endblock content%}
