@@ -12,7 +12,7 @@ db =Database()
 
 class User(db.Entity):
     name = Required(str)
-    email = Required(email)
+    email = Required(str)
     date_added = Required(datetime)
 
 class NameFormer(FlaskForm):
