@@ -45,3 +45,7 @@ print(m,l)
 #x= txt.strip()
 #txt.upper() uppercase
 #txt.replace() replace
+a = 23
+b = 12
+a //=b
+print(a)

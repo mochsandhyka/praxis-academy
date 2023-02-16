@@ -25,7 +25,7 @@ def login():
     try:
         jsonBody = request.json
         hashpassword = hashlib.md5((jsonBody['password']+ os.getenv("SALT_PASSWORD")).encode())
-        user = db.select(f"select username from public.user where username = '{jsonBody['username']}' and password = '{jsonBody['password']}'")
+        user = db.select(f"select username from public.user where username = '{jsonBody['username']}' and password = '{hashpassword.hexdigest()}'")
         if not user:
             response = {
                 "data": "Bad Request",
@@ -74,5 +74,3 @@ def register():
 @jwt_required()
 def private():
     currentUser = get_jwt_identity()
-    return jsonify(logged_in_as = currentUser), HTTPStatus.OK
-
