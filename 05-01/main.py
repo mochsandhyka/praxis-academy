@@ -12,9 +12,9 @@ jwt = JWTManager(app)
 
 db = Database()
 
-#class User(db.Entity):
- #   username = Required(str,unique = True)
-  #  password = Required(str)
+class User(db.Entity):
+    username = Required(str,unique = True)
+    password = Required(str)
 
 db.bind(provider = os.getenv('DB_PROVIDER'), user = os.getenv('DB_USERNAME'), password = os.getenv('DB_PASSWORD'), host = os.getenv('DB_HOST'), database = os.getenv('DB_NAME'))
 db.generate_mapping(create_tables=True)
@@ -74,3 +74,4 @@ def register():
 @jwt_required()
 def private():
     currentUser = get_jwt_identity()
+    return (currentUser)
