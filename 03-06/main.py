@@ -8,10 +8,7 @@ app = Flask(__name__)
 
 
 db = Database()
-
  
-
-
 class Admin(db.Entity):
     pk_admin = PrimaryKey(int, auto=True)
     email_admin = Required(str, unique=True)
@@ -354,8 +351,7 @@ def createPeminjaman(id):
     buku = db.execute(f"select pk_buku from buku where pk_buku = {id}")
     for a in buku:
         buku = a 
-    buku = sum(buku)
-    print(buku)
+    buku = sum(buku) 
     a = db.execute(f"select stok from buku where pk_buku = {id}")
     for a in a:
         a = a
