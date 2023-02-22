@@ -300,23 +300,18 @@ def bookList():
 # DETAIL BOOK
 @app.route("/detail/book/<id>")
 def bookDetail(id):
-    bookselectbyid = db.execute(f"select a.loan_date, a.date_of_return,b.name,c.name,d.judul_buku from borrowing as a left join admin as b on(a.fk_admin = b.pk_admin) left join public.user as c on(a.fk_user = c.pk_user) left join book as d on(a.fk_book = d.pk_buku) where fk_book = {id}")
-    sisa = db.execute(f"select extract(day from now() - date_of_return) from borrowing")
-    x = []
-    for i in sisa:
-        x.append(i)
-    for i in x:
-        int(i[0])
-    print(i)
+    bookselectbyid = db.execute(f"select a.loan_date, a.date_of_return,b.name,c.name,d.judul_buku, extract(day from a.date_of_return) - extract(day from now()) from borrowing as a left join admin as b on(a.fk_admin = b.pk_admin) left join public.user as c on(a.fk_user = c.pk_user) left join book as d on(a.fk_book = d.pk_buku) where fk_book = {id}")
+    
     y = []
     for i in bookselectbyid:
-        y.append(i)
+        y.append(i) 
     listselectbuku = []
     for i in y:
         dictbuku ={ 
             "_judul_buku": i[4],
             "loan_date": i[0],
-            "date_of_return": i[1], 
+            "date_of_return": i[1],
+            "sisa hari peminjaman": i[5], 
             "nama peminjam": i[3],
             "nama yg meminjamkan": i[2]
         }
