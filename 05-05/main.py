@@ -5,6 +5,7 @@ from http import HTTPStatus
 from datetime import date
 from flask_jwt_extended import JWTManager,jwt_required,create_access_token,get_current_user,get_jwt_identity
 import os,re,hashlib
+from flask_cors import CORS
  
 
 app = Flask(__name__)
@@ -13,59 +14,90 @@ regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
 email_regex = re.compile(r"[^@]+@[^@]+\.[^@]") 
 jwt = JWTManager(app)
 db = Database()
+CORS(app)
 
-class User(db.Entity):
-    pk_user = PrimaryKey(int,auto = True)
-    username = Required(str,unique = True)
-    email = Required(str,unique = True)
-    password = Required(str)
-    name = Required(str)
-    gender = Required(str)
-    borrowing = Set('Borrowing')
+# class User(db.Entity):
+#     _table_ = "tbl_user"
+#     id_user = PrimaryKey(int,auto = True)
+#     username = Required(str,unique = True)
+#     email = Required(str,unique = True)
+#     password = Required(str)
+#     name = Required(str)
+#     gender = Required(str)
+#     address = Required(str)
+#     phone_number = Required(str)
+#     borrowedbook = Set('BorrowedBook')
+#     returnedbook = Set('ReturnedBook')
 
-class Admin(db.Entity):
-    pk_admin = PrimaryKey(int, auto=True)
-    username = Required(str,unique = True)
-    email = Required(str, unique=True)
-    password = Required(str)
-    name = Required(str)
-    gender = Required(str)
-    borrowing = Set('Borrowing')
+# class Admin(db.Entity):
+#     _table_ = "tbl_admin"
+#     id_admin = PrimaryKey(int, auto=True)
+#     username = Required(str,unique = True)
+#     email = Required(str, unique=True)
+#     password = Required(str)
+#     name = Required(str)
+#     gender = Required(str)
+#     address = Required(str)
+#     phone_number = Required(str)
+#     borrowedbook = Set('BorrowedBook')
+#     returnedbook = Set('ReturnedBook')
 
-class BookTypes(db.Entity):
-    pk_book_type = PrimaryKey(int, auto=True)
-    types = Required(str, unique=True)
-    book = Set('Book')
+# class BookCategory(db.Entity):
+#     _table_ = "tbl_book_category"
+#     id_book_category = PrimaryKey(int, auto=True)
+#     category = Required(str, unique=True)
+#     book = Set('Book')
 
-class Author(db.Entity):
-    pk_author = PrimaryKey(int, auto=True)
-    author_name = Required(str, unique=True)
-    book = Set('Book')
+# class BookAuthor(db.Entity):
+#     _table_ = "tbl_book_author"
+#     id_book_author = PrimaryKey(int, auto=True)
+#     name = Required(str, unique=True)
+#     email = Optional(str)
+#     gender = Optional(str)
+#     address = Optional(str)
+#     phone_number = Optional(str)
+#     book = Set('Book')
 
-class Publisher(db.Entity):
-    pk_publisher = PrimaryKey(int, auto=True)
-    publisher_name = Required(str, unique=True)
-    book = Set('Book')
+# class Publisher(db.Entity):
+#     _table_ = "tbl_book_publisher"
+#     id_book_publisher = PrimaryKey(int, auto=True)
+#     name = Required(str, unique=True)
+#     email = Optional(str)
+#     address = Optional(str)
+#     phone_number = Optional(str)
+#     book = Set('Book')
 
-class Book(db.Entity):
-    pk_buku = PrimaryKey(int, auto=True)
-    stok = Required(int)
-    judul_buku = Required(str)
-    kategori = Required(BookTypes,column='fk_book_types')
-    pengarang = Required(Author,column='fk_author')
-    penerbit = Required(Publisher,column='fk_publisher')
-    borrowing = Set('Borrowing')
+# class Book(db.Entity):
+#     _table_ = "tbl_book"
+#     id_book = PrimaryKey(int, auto=True)
+#     stock = Required(int)
+#     book_title = Required(str)
+#     book_category = Required(BookCategory,column='id_book_category')
+#     book_author = Required(BookAuthor,column='id_book_author')
+#     book_publisher = Required(Publisher,column='id_book_publisher')
+#     borrowedbook = Set('BorrowedBook')
 
-class Borrowing(db.Entity):
-    pk_borrowing = PrimaryKey(int, auto=True)
-    loan_date = Required(date)
-    date_of_return = Required(date)
-    user = Required(User,column='fk_user')
-    admin = Optional(Admin,column='fk_admin')
-    book = Required(Book, column='fk_book')
+# class BorrowedBook(db.Entity):
+#     _table_ = "tbl_borrowed_book"
+#     id_book_borrowed = PrimaryKey(int, auto = True)
+#     loan_date = Required(date)
+#     date_of_return = Optional(date)
+#     status = Required(bool)
+#     user = Required(User,column='id_user')
+#     admin = Optional(Admin,column='id_admin')
+#     book = Required(Book, column='id_book')
+#     returnedbook = Set('ReturnedBook')
+
+# class ReturnedBook(db.Entity):
+    # _table_ = "tbl_returned_book"
+    # id_book_returned = PrimaryKey(int, auto = True)
+    # date_of_returned = Required(date)
+    # late_charge = Required(int)
+    # book_borrowed = Required(BorrowedBook, column='id_book_borrowed')
+
  
 db.bind(provider=os.getenv('DB_PROVIDER'),user=os.getenv('DB_USER'),password=os.getenv('DB_PASSWORD'),host=os.getenv("DB_HOST"),database=os.getenv("DB_NAME"))
-db.generate_mapping(create_tables=True)
+db.generate_mapping(create_tables=False)
 Pony(app)
 
 
@@ -106,11 +138,11 @@ def register():
             }
             return jsonify(response),HTTPStatus.BAD_REQUEST
     except Exception as err:
-        response ={
+        response = {
             "data": str(err),
-            "message": "Bad Gateway"
+            "message": "Bad"
         }
-        return jsonify(response), HTTPStatus.BAD_GATEWAY
+        return jsonify(response),HTTPStatus.BAD_GATEWAY
 
 # USER LOGIN
 @app.route("/auth/login",methods=['POST'])
@@ -137,7 +169,32 @@ def login():
             "message": "Bad"
         }
         return jsonify(response),HTTPStatus.BAD_GATEWAY
-        
+
+# USER LIST
+@app.route("/list/user")
+def listUser():
+    listUser = db.execute(f"select *from public.user")
+    y = []
+    for i in listUser:
+        y.append(i)
+    listselectbuku = []
+    for i in y:
+        dictbuku ={
+            "id": i[0],
+            "name": i[1],
+            "username": i[2], 
+            "email": i[3],
+            "password": i[4],
+            "gender": i[5]
+        }
+        listselectbuku.append(dictbuku)
+    response = {
+            "data": listselectbuku,
+            "message": "Success"
+        }
+    return jsonify(response),HTTPStatus.OK
+
+
 # USER BOROWING BOOK
 @app.route("/borrowBook/<id>",methods=['POST'])
 @jwt_required()
@@ -275,6 +332,7 @@ def createBook():
 
 # LIST BOOK
 @app.route("/list/book")
+#s@jwt_required()
 def bookList():
     selectbuku = db.execute(f"select a.pk_buku,a.stok,a.judul_buku,b.types,c.author_name,d.publisher_name from book as a left join booktypes as b on (a.fk_book_types = b.pk_book_type) left join author as c on (a.fk_author = c.pk_author) left join publisher as d on (a.fk_publisher = d.pk_publisher)")
     
