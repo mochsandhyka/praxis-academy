@@ -1,4 +1,4 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,session
 from pony.flask import Pony
 from pony.orm import Database,Required,PrimaryKey,Set,Optional
 from http import HTTPStatus
@@ -151,15 +151,17 @@ def login():
         jsonBody = request.json
         hashpass = hashlib.md5((jsonBody['password']+os.getenv("SALT_PASSWORD")).encode())
         user = db.select(f"select *from public.user where username = '{jsonBody['username']}' and password = '{hashpass.hexdigest()}'")
+        #session['username'] = hashpass
         if not user:
             response = {
                 "data": "Bad Request",
                 "message": "Username/ password salah"
             }
             return jsonify(response), HTTPStatus.BAD_REQUEST
+        
         access_token = create_access_token(identity=user)
         response = {
-            "data": f"Token : {access_token}",
+            "data": access_token,
             "message": "Berhasil Login"
         }
         return jsonify(response), HTTPStatus.OK
@@ -170,10 +172,23 @@ def login():
         }
         return jsonify(response),HTTPStatus.BAD_GATEWAY
 
+# USER LOGOUT
+@app.route("/auth/logout",methods=['DELETE'])
+def logout():
+    if 'username' in session:
+        session.pop('username',None)
+        response = {
+            "data": "400",
+            "message": "Already approved"
+        }
+        return jsonify(response), HTTPStatus.OK
+
+
+
 # USER LIST
 @app.route("/list/user")
 def listUser():
-    listUser = db.execute(f"select *from public.user")
+    listUser = db.execute(f"select pk_user,name,username,email,password,gender from public.user")
     y = []
     for i in listUser:
         y.append(i)
@@ -188,12 +203,90 @@ def listUser():
             "gender": i[5]
         }
         listselectbuku.append(dictbuku)
+    
     response = {
             "data": listselectbuku,
             "message": "Success"
         }
+    
     return jsonify(response),HTTPStatus.OK
 
+# LIST USER UPDATE
+@app.route("/update/user/<id>")
+def listUpdateUser(id):
+    try:
+        querySelectById = db.execute(f"select pk_user,username,password,email,name,gender from public.user where pk_user = {id}")
+        data = []
+        for i in querySelectById:
+            data.append({
+                "username": i[1],
+                "password": i[2],
+                "email": i[3],
+                "name": i[4],
+                "gender": i[5]
+            })
+        if not data:
+            respon = {
+                "data": "no data",
+                "message": "bad"
+            }
+            return jsonify(respon), HTTPStatus.BAD_REQUEST
+        respon = {
+            "data": data[0],
+            "message": "data is found"
+        }
+        return jsonify(respon),HTTPStatus.OK
+        
+    except Exception as respError:
+        respon = {
+            "data": str(respError),
+            "message": "bad gateway"
+        }
+        return jsonify(respon),HTTPStatus.BAD_GATEWAY
+
+# USER UPDATE
+@app.route("/update/user/<id>",methods=['PUT'])
+def updateUser(id):
+    bodyJson = request.json
+    hashpass = hashlib.md5((bodyJson['password']+os.getenv("SALT_PASSWORD")).encode())
+    queryUpdate = f"update public.user set username='{bodyJson['username']}' ,password = '{hashpass.hexdigest()}',email='{bodyJson['email']}',name='{bodyJson['name']}',gender='{bodyJson['gender']}' where pk_user = {id}"
+    db.execute(queryUpdate)
+    response = {
+        "data": "Update",
+        "message": "Data updated"
+    }
+    return jsonify(response), HTTPStatus.ACCEPTED
+
+# USER DELETE
+@app.route("/delete/user/<id>",methods=['DELETE'])
+def deleteUser(id):
+    try:
+        selectById = (f"select pk_user from public.user where pk_user = {id}")
+        data = []
+        for i in db.execute(selectById):
+            data.append({
+                "id": i[0]
+            })
+        if not data:
+            response = {
+                "data": "no data",
+                "message": "bad request"
+            }
+            return jsonify(response), HTTPStatus.BAD_REQUEST
+        else:
+            deleteById = (f"delete from public.user where pk_user = {id}")
+            db.execute(deleteById) 
+            response = {
+            "data": "delete tasklist",
+            "message": "Delete Success"
+        } 
+        return jsonify(response), HTTPStatus.ACCEPTED
+    except Exception as respError:
+        response={
+            "data": str(respError),
+            "message": "bad gateway"
+        }
+        return jsonify(response),HTTPStatus.BAD_GATEWAY
 
 # USER BOROWING BOOK
 @app.route("/borrowBook/<id>",methods=['POST'])
